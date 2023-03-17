@@ -3,8 +3,32 @@
     justify-content: flex-start;
     flex-wrap: nowrap;
     flex-direction: row;
-    min-width: 100%;
-    width: auto;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
+    position: relative;
+    padding-left: 25px;
+    // &::before {
+    //     content: "";
+    //     width: 20px;
+    //     // left: 0;
+    //     top: 0;
+    //     bottom: 0;
+    //     position: fixed;
+    //     background-color: white;
+    //     z-index: 20;
+    // }
+    &::-webkit-scrollbar {
+        width: 6px; /* ширина scrollbar */
+        z-index: 11;
+    }
+    &::-webkit-scrollbar-track {
+        background: #2f2f2f; /* цвет дорожки */
+        z-index: 11;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #474646; /* цвет плашки */
+        border-radius: 20px; /* закругления плашки */
+        border: 3px solid #2f2f2f; /* padding вокруг плашки */
+        z-index: 11;
+    }
 }
