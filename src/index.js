@@ -41,7 +41,29 @@ function Index() {
                             ],
                         };
                     console.log(column.cards.Object);
-                    console.log(state[0].cards[0].title);
+                    return column;
+                });
+            case "ADD_TASK":
+                return state.map((column) => {
+                    if (column.id === action.colId)
+                        return column.cards.map((card) => {
+                            if (card.id === action.cardId)
+                                return {
+                                    ...card,
+                                    tasks: [
+                                        ...card.tasks,
+                                        {
+                                            id: randomId("task"),
+                                            type: "task",
+                                            title: action.title,
+                                            description: "task description",
+                                            tags: [],
+                                            color: "",
+                                        },
+                                    ],
+                                };
+                            return card;
+                        });
                     return column;
                 });
             default:

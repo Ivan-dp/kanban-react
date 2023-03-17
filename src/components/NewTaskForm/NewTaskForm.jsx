@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { PropTypes } from "prop-types";
 import { useDispatch } from "react-redux";
-import "./NewCardForm.scss";
+import "./NewTaskForm.scss";
 
-const NewCardForm = (props) => {
-    NewCardForm.propTypes = {
+const NewTaskForm = (props) => {
+    NewTaskForm.propTypes = {
+        card: PropTypes.object.isRequired,
         column: PropTypes.object.isRequired,
     };
 
@@ -17,31 +18,32 @@ const NewCardForm = (props) => {
         setTitle(e.target.value);
     };
 
-    const addNewCard = (e) => {
+    const addNewTask = (e) => {
         e.preventDefault();
         if (title) {
             dispatch({
-                type: "ADD_CARD",
+                type: "ADD_TASK",
                 title: title,
-                id: props.column.id,
+                colId: props.column.id,
+                cardId: props.card.id,
             });
         }
         setTitle("");
     };
     return (
-        <div className="NewCardForm">
+        <div className="NewTaskForm">
             <form>
                 <input
                     value={title}
                     onChange={(event) => {
                         addNewTitle(event);
                     }}
-                    placeholder="Enter the card name"
+                    placeholder="Enter the task name"
                     maxLength={35}
                 />
                 <button
                     onClick={(event) => {
-                        addNewCard(event);
+                        addNewTask(event);
                     }}
                 >
                     Add
@@ -51,4 +53,4 @@ const NewCardForm = (props) => {
     );
 };
 
-export { NewCardForm };
+export { NewTaskForm };

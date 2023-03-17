@@ -15,7 +15,7 @@ const Column = (props) => {
             <div className="Column__body">
                 <NewCardForm column={props.column} />
                 {props.column.cards.map((card) => {
-                    return <Card key={card.id} card={card} />;
+                    return <Card key={card.id} card={card} column={props.column} />;
                 })}
             </div>
         </div>
