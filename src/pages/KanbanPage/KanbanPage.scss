@@ -1,0 +1,10 @@
+.KanbanPage {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+    overflow: scroll;
+}

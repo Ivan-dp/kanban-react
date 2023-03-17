@@ -10,7 +10,7 @@ import { randomId } from "./functions";
 
 function Index() {
     const reducer = (state = [], action) => {
-        console.log(state);
+        // console.log(state);
         switch (action.type) {
             case "ADD_COLUMN":
                 return [

@@ -1,15 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import "./NewColumnForm.scss";
-import { useSelector, useDispatch } from "react-redux";
 
 const NewColumnForm = () => {
     const [title, setTitle] = useState("");
 
-    let columns = useSelector((store) => store);
-
     const dispatch = useDispatch();
-
-    console.log(columns);
 
     const addNewTitle = (e) => {
         e.preventDefault();
