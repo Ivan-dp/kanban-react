@@ -32,6 +32,7 @@ const NewColumnForm = () => {
                         addNewTitle(event);
                     }}
                     placeholder="Enter the column name"
+                    maxLength={40}
                 />
                 <button
                     onClick={(event) => {
