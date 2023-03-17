@@ -17,9 +17,33 @@ function Index() {
                     ...state,
                     {
                         id: randomId("column"),
+                        type: "column",
                         title: action.payload,
+                        cards: [],
                     },
                 ];
+            case "ADD_CARD":
+                return state.map((column) => {
+                    if (column.id === action.id)
+                        return {
+                            ...column,
+                            cards: [
+                                ...column.cards,
+                                {
+                                    id: randomId("card"),
+                                    type: "card",
+                                    title: action.title,
+                                    description: "card description",
+                                    tags: [],
+                                    color: "",
+                                    tasks: [],
+                                },
+                            ],
+                        };
+                    console.log(column.cards.Object);
+                    console.log(state[0].cards[0].title);
+                    return column;
+                });
             default:
                 return state;
         }

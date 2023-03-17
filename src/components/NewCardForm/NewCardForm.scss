@@ -1,8 +1,7 @@
-.NewColumnForm {
-    min-width: 20%;
-    height: 60px;
+.NewCardForm {
+    width: 90%;
+    height: 40px;
     display: flex;
-    margin: 15px;
     justify-content: center;
     form {
         display: flex;
@@ -14,7 +13,7 @@
         border-radius: 15px;
         input {
             height: 100%;
-            width: 80%;
+            width: 75%;
             background-color: transparent;
             border: none;
             outline: none;
@@ -25,7 +24,7 @@
         button {
             position: relative;
             height: 100%;
-            width: 20%;
+            width: 25%;
             background-color: transparent;
             border: none;
             outline: none;

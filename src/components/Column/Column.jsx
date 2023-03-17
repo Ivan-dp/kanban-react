@@ -1,6 +1,7 @@
 import React from "react";
 import { PropTypes } from "prop-types";
 import "./Column.scss";
+import { NewCardForm } from "../NewCardForm/NewCardForm";
 
 const Column = (props) => {
     Column.propTypes = {
@@ -11,7 +12,12 @@ const Column = (props) => {
             <div className="Column__header">
                 <h3>{props.column.title}</h3>
             </div>
-            <div className="Column__body"></div>
+            <div className="Column__body">
+                <NewCardForm column={props.column} />
+                {props.column.cards.map((card) => {
+                    return JSON.stringify(card.id);
+                })}
+            </div>
         </div>
     );
 };
