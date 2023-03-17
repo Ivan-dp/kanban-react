@@ -1,11 +1,10 @@
 aside.Sidebar {
     width: 15%;
-    height: 100%;
+    height: initial;
     background-color: #2f2f2f;
     flex-grow: 1;
     border-right: 1px solid #474646;
     padding: 15px;
-    // box-shadow: 10px 10px 10px 10px #252525;
     // z-index: 10;
     nav {
         width: 100%;

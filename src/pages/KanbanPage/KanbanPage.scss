@@ -2,21 +2,9 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    flex-direction: row;
-    height: 100%;
     overflow: auto;
     position: relative;
     padding-left: 25px;
-    // &::before {
-    //     content: "";
-    //     width: 20px;
-    //     // left: 0;
-    //     top: 0;
-    //     bottom: 0;
-    //     position: fixed;
-    //     background-color: white;
-    //     z-index: 20;
-    // }
     &::-webkit-scrollbar {
         width: 6px; /* ширина scrollbar */
         z-index: 11;
