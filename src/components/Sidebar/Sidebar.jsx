@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.scss";
 
 const Sidebar = () => {
     return (
         <aside className="Sidebar">
             <nav>
-                <a href="/">Kanban</a>
-                <a href="#">Link2</a>
-                <a href="#">Link3</a>
+                <Link to="/">Kanban</Link>
+                <Link to="/page1">Link2</Link>
+                <Link to="/page2">Link3</Link>
             </nav>
         </aside>
     );
