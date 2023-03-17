@@ -1,0 +1,36 @@
+.Card {
+    width: 90%;
+    height: auto;
+    background-color: #2f2f2f;
+    border-radius: 15px;
+    border: 1px solid #474646;
+    display: block;
+    align-items: center;
+    overflow: hidden;
+    margin: 10px 0;
+    h3,
+    p {
+        color: white;
+        text-transform: uppercase;
+    }
+    &__header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: auto;
+        height: auto;
+        border-bottom: 1px solid #474646;
+        background-color: #474646;
+        padding: 15px 15px 15px 15px;
+        word-break: break-all;
+    }
+    &__body {
+        height: auto;
+        background-color: #2f2f2f;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
