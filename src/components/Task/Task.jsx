@@ -1,10 +1,10 @@
 import React from "react";
 import { PropTypes } from "prop-types";
+import "./Task.scss";
 
 const Task = ({ task }) => {
     Task.propTypes = {
         task: PropTypes.object.isRequired,
-        // column: PropTypes.object.isRequired,
     };
     return (
         <div className="Task">

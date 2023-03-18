@@ -43,13 +43,11 @@ function Index() {
                     return column;
                 });
             case "ADD_TASK":
-                return (state[action.colKey].cards[action.cardKey].tasks = [
-                    ...state[action.colKey].cards[action.cardKey].tasks,
-                    {
-                        id: randomId("task"),
-                        title: action.title,
-                    },
-                ]);
+                state[action.colKey].cards[action.cardKey].tasks.push({
+                    id: randomId("task"),
+                    title: action.title,
+                });
+                return [...state];
             default:
                 return state;
         }

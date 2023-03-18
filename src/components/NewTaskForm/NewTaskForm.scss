@@ -1,0 +1,47 @@
+.NewTaskForm {
+    width: auto;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    form {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+        background-color: #474646;
+        border-radius: 15px;
+        input {
+            height: 100%;
+            width: 70%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            padding: 0 10px 0 20px;
+            color: white;
+            text-transform: uppercase;
+        }
+        button {
+            position: relative;
+            height: 100%;
+            width: 30%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                content: "";
+                position: absolute;
+                height: 70%;
+                border-left: 1px solid white;
+                opacity: 0.5;
+                left: 0;
+            }
+        }
+    }
+}

@@ -18,7 +18,6 @@ const Card = (props) => {
             <div className="Card__body">
                 <NewTaskForm column={props.column} card={props.card} />
                 {props.card.tasks.map((task) => {
-                    console.log(task);
                     return <Task key={task.id} task={task} />;
                 })}
             </div>
