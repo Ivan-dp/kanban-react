@@ -10,7 +10,7 @@ import { randomId } from "./functions";
 
 function Index() {
     const reducer = (state = [], action) => {
-        // console.log(state);
+        console.log(state);
         switch (action.type) {
             case "ADD_COLUMN":
                 return [
@@ -40,32 +40,16 @@ function Index() {
                                 },
                             ],
                         };
-                    console.log(column.cards.Object);
                     return column;
                 });
             case "ADD_TASK":
-                return state.map((column) => {
-                    if (column.id === action.colId)
-                        return column.cards.map((card) => {
-                            if (card.id === action.cardId)
-                                return {
-                                    ...card,
-                                    tasks: [
-                                        ...card.tasks,
-                                        {
-                                            id: randomId("task"),
-                                            type: "task",
-                                            title: action.title,
-                                            description: "task description",
-                                            tags: [],
-                                            color: "",
-                                        },
-                                    ],
-                                };
-                            return card;
-                        });
-                    return column;
-                });
+                return (state[action.colKey].cards[action.cardKey].tasks = [
+                    ...state[action.colKey].cards[action.cardKey].tasks,
+                    {
+                        id: randomId("task"),
+                        title: action.title,
+                    },
+                ]);
             default:
                 return state;
         }

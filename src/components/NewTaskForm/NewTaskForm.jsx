@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PropTypes } from "prop-types";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./NewTaskForm.scss";
 
 const NewTaskForm = (props) => {
@@ -8,6 +8,8 @@ const NewTaskForm = (props) => {
         card: PropTypes.object.isRequired,
         column: PropTypes.object.isRequired,
     };
+
+    let columns = useSelector((store) => store);
 
     const [title, setTitle] = useState("");
 
@@ -26,6 +28,8 @@ const NewTaskForm = (props) => {
                 title: title,
                 colId: props.column.id,
                 cardId: props.card.id,
+                colKey: columns.indexOf(props.column),
+                cardKey: props.column.cards.indexOf(props.card),
             });
         }
         setTitle("");
