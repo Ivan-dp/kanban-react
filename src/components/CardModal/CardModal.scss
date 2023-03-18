@@ -1,0 +1,63 @@
+.CardModal {
+    display: none;
+    &.active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .CardModal {
+            &__content {
+                position: absolute;
+                width: 600px;
+                height: 700px;
+                background-color: white;
+                left: auto;
+                top: auto;
+                bottom: auto;
+                right: auto;
+                margin: auto;
+                // width: 90%;
+                // height: auto;
+                background-color: #2f2f2f;
+                border-radius: 15px;
+                border: 1px solid #474646;
+                display: block;
+                align-items: center;
+                overflow: hidden;
+                // margin: 10px 0;
+            }
+            h3,
+            p {
+                color: white;
+                text-transform: uppercase;
+            }
+            &__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: auto;
+                height: auto;
+                border-bottom: 1px solid #474646;
+                background-color: #474646;
+                padding: 15px 15px 15px 15px;
+                word-break: break-all;
+            }
+            &__body {
+                height: auto;
+                background-color: #2f2f2f;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                // align-items: center;
+            }
+        }
+    }
+}
