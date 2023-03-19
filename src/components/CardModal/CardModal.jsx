@@ -12,7 +12,7 @@ const CardModal = (props) => {
     };
     return (
         <div
-            className={props.active ? "CardModal" : "CardModal active"}
+            className={props.active === false ? "CardModal" : "CardModal active"}
             onClick={() => {
                 props.setActive(!props.active);
             }}

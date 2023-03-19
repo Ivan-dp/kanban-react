@@ -42,6 +42,13 @@ function Index() {
                         };
                     return column;
                 });
+            case "DELETE_CARD":
+                state[action.colKey].cards = [
+                    ...state[action.colKey].cards.filter((card) => {
+                        return card.id !== action.id;
+                    }),
+                ];
+                return [...state];
             case "ADD_TASK":
                 state[action.colKey].cards[action.cardKey].tasks.push({
                     id: randomId("task"),

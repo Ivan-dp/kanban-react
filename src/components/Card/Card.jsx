@@ -4,6 +4,7 @@ import "./Card.scss";
 import { NewTaskForm, Task, CardModal } from "../";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faListUl, faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
 
 const Card = (props) => {
     Card.propTypes = {
@@ -11,7 +12,20 @@ const Card = (props) => {
         column: PropTypes.object.isRequired,
     };
 
+    const columns = useSelector((store) => store);
+
     const [active, setActive] = useState(false);
+
+    const dispatch = useDispatch();
+
+    const deleteCard = (event) => {
+        event.preventDefault();
+        dispatch({
+            type: "DELETE_CARD",
+            colKey: columns.indexOf(props.column),
+            id: props.card.id,
+        });
+    };
 
     return (
         <div className="Card">
@@ -25,7 +39,12 @@ const Card = (props) => {
                 >
                     <FontAwesomeIcon icon={faListUl} />
                 </button>
-                <button className="Card__close">
+                <button
+                    className="Card__close"
+                    onClick={(e) => {
+                        deleteCard(e);
+                    }}
+                >
                     <FontAwesomeIcon icon={faTrashCan} />
                 </button>
             </div>

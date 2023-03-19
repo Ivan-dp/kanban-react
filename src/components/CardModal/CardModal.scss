@@ -1,5 +1,6 @@
 .CardModal {
     display: none;
+    z-index: 15;
     &.active {
         position: fixed;
         top: 0;
@@ -16,15 +17,14 @@
             &__content {
                 position: absolute;
                 width: 600px;
-                height: 700px;
+                max-height: 700px;
+                height: 80%;
                 background-color: white;
                 left: auto;
                 top: auto;
                 bottom: auto;
                 right: auto;
                 margin: auto;
-                // width: 90%;
-                // height: auto;
                 background-color: #2f2f2f;
                 border-radius: 15px;
                 border: 1px solid #474646;
