@@ -14,9 +14,18 @@
         color: white;
         text-transform: uppercase;
     }
+    &__close {
+        margin: 0 10px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        svg {
+            color: aliceblue;
+        }
+    }
     &__header {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         width: auto;
         height: auto;

@@ -49,6 +49,13 @@ function Index() {
                     }),
                 ];
                 return [...state];
+            case "DELETE_COLUMN":
+                state = [
+                    ...state.filter((column) => {
+                        return column.id !== action.id;
+                    }),
+                ];
+                return [...state];
             case "ADD_TASK":
                 state[action.colKey].cards[action.cardKey].tasks.push({
                     id: randomId("task"),
