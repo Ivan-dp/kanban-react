@@ -14,7 +14,7 @@ const Column = (props) => {
 
     const dispatch = useDispatch();
 
-    const deleteCard = (event) => {
+    const deleteColumn = (event) => {
         event.preventDefault();
         dispatch({
             type: "DELETE_COLUMN",
@@ -28,9 +28,9 @@ const Column = (props) => {
             <div className="Column__header">
                 <h3>{props.column.title}</h3>
                 <button
-                    className="Card__close"
+                    className="Column__close"
                     onClick={(e) => {
-                        deleteCard(e);
+                        deleteColumn(e);
                     }}
                 >
                     <FontAwesomeIcon icon={faTrashCan} />

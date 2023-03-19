@@ -62,6 +62,13 @@ function Index() {
                     title: action.title,
                 });
                 return [...state];
+            case "DELETE_TASK":
+                state[action.colKey].cards[action.cardKey].tasks = [
+                    ...state[action.colKey].cards[action.cardKey].tasks.filter((task) => {
+                        return task.id !== action.id;
+                    }),
+                ];
+                return [...state];
             default:
                 return state;
         }

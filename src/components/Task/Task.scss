@@ -1,8 +1,17 @@
 .Task {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     h3 {
         word-break: break-all;
+    }
+    &__close {
+        margin: 0 10px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        svg {
+            color: aliceblue;
+        }
     }
 }
