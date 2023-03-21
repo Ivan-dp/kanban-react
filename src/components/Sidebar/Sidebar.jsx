@@ -7,7 +7,7 @@ const Sidebar = () => {
         <aside className="Sidebar">
             <nav>
                 <Link to="/">Kanban</Link>
-                <Link to="/page1">Link2</Link>
+                <Link to="/page1">Egor</Link>
                 <Link to="/page2">Link3</Link>
             </nav>
         </aside>
