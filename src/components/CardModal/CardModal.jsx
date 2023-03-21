@@ -29,7 +29,7 @@ const CardModal = (props) => {
                 <div className="CardModal__body">
                     <NewTaskForm column={props.column} card={props.card} />
                     {props.card.tasks.map((task) => {
-                        return <Task key={task.id} task={task} />;
+                        return <Task key={task.id} task={task} column={props.column} card={props.card} />;
                     })}
                 </div>
             </div>
